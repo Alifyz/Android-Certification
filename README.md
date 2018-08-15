@@ -1,6 +1,6 @@
 # Android-Certification
 
-Repository for studying and preparing for Associate Developer Certification. (https://developers.google.com/training/certification/associate-android-developer/#exam-content)[Google Official Certification Webpage. ]
+Repository for studying and preparing for Associate Developer Certification. [https://developers.google.com/training/certification/associate-android-developer/#exam-content](Google Official Certification Webpage)
 
 
 ## Testing and Debugging
