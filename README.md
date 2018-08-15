@@ -1,6 +1,6 @@
 # Android-Certification
 
-[logo](https://ageektogo.net/wp-content/uploads/2013/08/manu-cornet-bugdroid-cartoon-android-evolution-key-lime-pie.jpg)
+![logo](https://ageektogo.net/wp-content/uploads/2013/08/manu-cornet-bugdroid-cartoon-android-evolution-key-lime-pie.jpg)
 
 Repository for studying and preparing for Associate Developer Certification. 
 * [Google Certification Webpage](https://developers.google.com/training/certification/associate-android-developer/#exam-content)
