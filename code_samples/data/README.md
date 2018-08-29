@@ -2,7 +2,7 @@
 
 ## Define data using Room entities
 
-'''kotlin
+```kotlin
 @Entity(tableName = "popular")
 data class Popular(
         @PrimaryKey
@@ -44,7 +44,7 @@ data class Popular(
         @Expose
         var originCountry: List<String>? = null
 )
-'''
+```
 
 
 
