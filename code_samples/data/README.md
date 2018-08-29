@@ -73,6 +73,31 @@ interface SeriesDao {
     fun delete(vararg  series: Top)
 }
 ```
+## Create the Singleton Database Object (Room)
+
+```kotlin
+@Database(entities = arrayOf(Popular::class, Top::class), version = 1)
+abstract class SeriesDatabase : RoomDatabase() {
+
+    abstract fun SeriesDao(): SeriesDao
+
+    companion object {
+        private var INSTANCE : SeriesDatabase? = null
+        fun getInstance(context: Context) : SeriesDatabase?{
+            if(INSTANCE == null) {
+                INSTANCE = Room.databaseBuilder(
+                        context,
+                        SeriesDatabase::class.java,
+                        "SeriesDb")
+                        .build()
+                return INSTANCE
+            } else {
+                return INSTANCE
+            }
+        }
+    }
+}
+```
 
 * Observe and respond to changing data using LiveData
 * Use a Repository to handle data operations
