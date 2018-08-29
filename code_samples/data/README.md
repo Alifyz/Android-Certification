@@ -1,6 +1,9 @@
 # App data and files
 
 ## Define data using Room entities
+The following code snippet is used to serialize a TV Series object fetch using The Movie DB API found here: https://www.themoviedb.org/documentation/api
+
+The SerializeName is used to link the variables with the proper field whenever we used a different variable name for the object. 
 
 ```kotlin
 @Entity(tableName = "popular")
