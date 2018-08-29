@@ -1,9 +1,9 @@
 # App data and files
 
 ## Define data using Room entities
-The following code snippet is used to serialize a TV Series object fetch using The Movie DB API found here: https://www.themoviedb.org/documentation/api
+The following code snippet is used to serialize a TV Series object fetched using The Movie DB API found here: https://www.themoviedb.org/documentation/api
 
-The SerializeName is used to link the variables with the proper field whenever we used a different variable name for the object. 
+The SerializeName is used to link the variables with the proper field whenever we use a different variable name for the object. 
 
 ```kotlin
 @Entity(tableName = "popular")
@@ -50,9 +50,27 @@ data class Popular(
 ```
 
 
+## Access Room database with data access object (DAO)
+The code-snippet below is an example of how we can use the Room Library to create a simple Interface that will be implemented by the Room library to create routes to add, fetch, update and delete data from the SQLite Database. 
 
+```kotlin
+@Dao
+interface SeriesDao {
 
-* Access Room database with data access object (DAO)
+    @Query("SELECT * FROM popular")
+    fun getAllPopular() : List<Popular>
+
+    @Query("SELECT * FROM top")
+    fun getAllTop() : List<Top>
+
+    @Insert
+    fun insertPopular(vararg series: Popular)
+
+    @Insert
+    fun insertTop(vararg  series : Top)
+}
+```
+
 * Observe and respond to changing data using LiveData
 * Use a Repository to handle data operations
 * Read and parse raw resources or asset files
