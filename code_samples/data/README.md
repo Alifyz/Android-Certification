@@ -65,9 +65,12 @@ interface SeriesDao {
 
     @Insert
     fun insertPopular(vararg series: Popular)
-
-    @Insert
+    //If we try to insert the same data, the table will be replaced
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertTop(vararg  series : Top)
+    
+    @Delete
+    fun delete(vararg  series: Top)
 }
 ```
 
