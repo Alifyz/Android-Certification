@@ -80,7 +80,7 @@ interface SeriesDao {
 abstract class SeriesDatabase : RoomDatabase() {
 
     abstract fun SeriesDao(): SeriesDao
-
+    @Synchronized    
     companion object {
         private var INSTANCE : SeriesDatabase? = null
         fun getInstance(context: Context) : SeriesDatabase?{
