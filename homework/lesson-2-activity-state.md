@@ -29,6 +29,8 @@ Answer these questions
     The counter is reset to 0, and the EditText no longer contains the text you entered.
     The counter is reset to 0, but the contents of the EditText is preserved.
     The counter and the contents of the EditText are preserved.
+    
+Correct Answer: The counter is reset to 0, but the contents of the EditText is preserved.
 
 ## Question 2
 
@@ -38,6 +40,8 @@ Answer these questions
     Android shuts down your Activity by calling onPause(), onStop(), and onDestroy(). Your code must restart the Activity.
     Android shuts down your Activity by calling onPause(), onStop(), and onDestroy(), and then starts it over again, calling onCreate(), onStart(), and onResume().
     Android immediately calls onResume().
+    
+Correct Answer:  Android shuts down your Activity by calling onPause(), onStop(), and onDestroy(), and then starts it over again, calling onCreate(), onStart(), and onResume().
 
 ## Question 3
 
@@ -48,6 +52,8 @@ Answer these questions
     onSaveInstanceState() is called before the onCreate() method.
     onSaveInstanceState() is called before the onDestroy() method.
 
+Correnct Answer: onSaveInstanceState() is called before the onStop() method.
+
 ## Question 4
 
 ### Which Activity lifecycle methods are best to use for saving data before the Activity is finished or destroyed? Choose one:
@@ -57,6 +63,7 @@ Answer these questions
     onDestroy()
     onStart() or onRestart()
 
+Correcnt Answer: onPause() or onStop()
 
 ### Submit your app for grading
 Guidance for graders
